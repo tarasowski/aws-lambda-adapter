@@ -9,6 +9,7 @@ from business import add, subtract, multiply, divide
 
 # here is my handler 👇
 # a slim adapter
+# Generally speaking, you should write a handler that extracts and validates data from the incoming event and context objects, then sends that input to methods that perform your business logic.
 def handler(event,  context):
     action = event.get("action")
     if action == "add":
